@@ -9,8 +9,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import reducers from './reducers';
 import rootSaga from './sagas';
-import UsersScreen from './screens/usersScreen';
-import ProjectsScreen from './screens/projectsScreen';
+import UsersScreen from './components/screens/usersScreen';
+import ProjectsScreen from './components/screens/projectsScreen';
 
 interface AppProps { 
   title?: string
