@@ -11,9 +11,16 @@ import reducers from './reducers';
 import rootSaga from './sagas';
 import UsersScreen from './components/screens/usersScreen';
 import ProjectsScreen from './components/screens/projectsScreen';
+import ComponentTestScreen from './components/screens/componentTestScreen';
 
 interface AppProps { 
   title?: string
+}
+
+enum Screens { 
+  USERS_SCREEN = 'Users',
+  PROJECTS_SCREEN = 'Projects',
+  COMPONENT_TEST_SCREEN = 'Components'
 }
 
 
@@ -32,9 +39,10 @@ export default function App({title='Custom Title'}: AppProps) {
   return (
     <Provider store={store}>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Users">
-          <Stack.Screen name="Users" component={UsersScreen} />
-          <Stack.Screen name="Projects" component={ProjectsScreen} />
+        <Stack.Navigator initialRouteName={Screens.COMPONENT_TEST_SCREEN}>
+          <Stack.Screen name={Screens.COMPONENT_TEST_SCREEN} component={ComponentTestScreen} />
+          <Stack.Screen name={Screens.USERS_SCREEN} component={UsersScreen} />
+          <Stack.Screen name={Screens.PROJECTS_SCREEN} component={ProjectsScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>
