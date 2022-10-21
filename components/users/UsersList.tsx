@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, FlatList} from 'react-native';
 
-import {User} from '../interfaces/users';
+import {User} from '../../interfaces/users';
 
 export interface UserListProps {
     users: User[],
