@@ -6,7 +6,7 @@ import {User} from '../../interfaces/users';
 import {userListSelector} from '../../selectors/users';
 
 import {GenScreen} from '../common';
-import UsersList from '../UsersList';
+import UsersList from '../users/UsersList';
 import NewUserForm from '../users/forms/NewUserForm';
 
 export const UsersScreen = () => {    const dispatch = useDispatch()
@@ -23,8 +23,6 @@ export const UsersScreen = () => {    const dispatch = useDispatch()
     const handleDelete = (id: string) => {
       dispatch(deleteUserRequest(id))
     }
-
-
 
     return (
         <GenScreen>
