@@ -12,7 +12,7 @@ export const Navigator = () => {
 
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName={Screens.COMPONENT_TEST_SCREEN}>
+            <Stack.Navigator initialRouteName={Screens.USERS_SCREEN}>
             <Stack.Screen name={Screens.COMPONENT_TEST_SCREEN} component={ComponentTestScreen} />
             <Stack.Screen name={Screens.USERS_SCREEN} component={UsersScreen} />
             <Stack.Screen name={Screens.PROJECTS_SCREEN} component={ProjectsScreen} />

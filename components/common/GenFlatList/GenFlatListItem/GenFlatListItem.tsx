@@ -9,22 +9,22 @@ export interface GenFlatListItemProps {
     comment?: string
 }
 
+const GenFlatListColumn = (text?: number | string) => {
+    return (
+        <View style={{flex: 1}}>
+            <Text style={{fontSize: 12}}>{text}</Text>
+        </View>
+    )
+}
+
 const GenFlatListItem: React.FC<ListRenderItemInfo<GenFlatListItemProps>> = ({item}) => {
-    console.log(item)
     return (
         <View style={{flex: 1, flexDirection: 'row', paddingBottom: 5}}>
-            <View style={{flex: 1}}>
-                <Text style={{fontSize: 12}}>{item.title}</Text>
-            </View>
-            <View style={{flex: 1}}>
-                <Text style={{fontSize: 12}}>{item.name}</Text>
-            </View>
-            <View style={{flex: 1}}>
-                <Text style={{fontSize: 12}}>{item.capacity}</Text>
-            </View>
-            <View style={{flex: 1}}>
-                <Text style={{fontSize: 12}}>{item.comment}</Text>
-            </View>
+            {GenFlatListColumn(item.title)}
+            {GenFlatListColumn(item.name)}
+            {GenFlatListColumn(item.capacity)}
+            {GenFlatListColumn(item.comment)}
+            {GenFlatListColumn(item.title)}
         </View>
     )
 }
